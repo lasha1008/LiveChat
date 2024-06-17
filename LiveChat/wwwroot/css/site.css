@@ -1,0 +1,21 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    background-color: rgb(26, 0, 26);
+    background-size: cover;
+    background-blur: 10px;
+    background-attachment: fixed;
+}

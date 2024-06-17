@@ -1,0 +1,75 @@
+﻿@using LiveChat.Models
+@model LoginUser
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<style>
+    #login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+
+    #login-form {
+        max-width: 640px;
+        margin: auto;
+        background-color: #663399;
+        padding: 48px;
+        border-radius: 12.8px;
+        box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
+    }
+
+        #login-form label {
+            display: block;
+            margin-bottom: 19.2px;
+            color: #fff;
+            font-size: 28.8px;
+        }
+
+        #login-form input {
+            width: calc(100% - 19.2px);
+            padding: 19.2px;
+            margin-bottom: 32px;
+            box-sizing: border-box;
+            border: 3.2px solid #ccc;
+            border-radius: 9.6px;
+            font-size: 25.6px;
+        }
+
+        #login-form button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 24px 32px;
+            border: none;
+            border-radius: 9.6px;
+            cursor: pointer;
+            font-size: 28.8px;
+        }
+
+            #login-form button:hover {
+                background-color: #45a049;
+            }
+
+        #login-form span {
+            color: #d9534f;
+            font-size: 25.6px;
+        }
+</style>
+
+
+
+<div id="login-container">
+    <form id="login-form" asp-controller="Account" asp-action="Login" method="post">
+        <div>
+            <label asp-for="Username">Username:</label>
+            <input asp-for="Username" />
+            <span asp-validation-for="Username"></span>
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+</div>
